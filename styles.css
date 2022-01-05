@@ -42,6 +42,13 @@ body {
     border: 5px solid #E63946;
     border-radius: 10px;
     box-shadow: 0 0 0 5px #F1FAEE;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;   
+}
+.timeline>li .timeline-panel:hover{
+    visibility: visible;
+    opacity: 1;
 }
 
 .timeline>li .timeline-panel:before {
@@ -74,7 +81,11 @@ body {
 .timeline>li .timeline-image:hover {
     cursor: pointer;
 }
-
+.timeline-image:hover + .timeline-panel{
+   visibility: visible;
+   opacity: 1;
+   transition: visibilty 0s,opacity 0.5s linear;
+}
 .timeline>li .timeline-image h4 {
     margin-top: 12px;
     font-size: 10px;
@@ -119,7 +130,7 @@ body {
     text-transform: none;
     font-size: 18px;
     color: #000;
-    ;
+    
 }
 
 .timeline .timeline-body>p,
@@ -131,7 +142,7 @@ body {
 .timeline>li .triangle {
     position: absolute;
     top: 16px;
-    left: 41%;
+    left: 101%;
     border-left: 55px solid #E63946;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
@@ -140,7 +151,7 @@ body {
 .timeline>li .triangle-inverted {
     position: absolute;
     top: 16px;
-    right: 41%;
+    right: 101%;
     border-right: 55px solid #E63946;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
