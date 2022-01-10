@@ -1,0 +1,43 @@
+{
+    "resources": [{
+            "level-no": "1",
+            "part-no": "1",
+            "title": "Blockchain",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "video": "/",
+            "blog": "/",
+            "tag": "blockchain",
+            "blockchain-tag": "ethereum"
+        },
+        {
+            "level-no": "1",
+            "part-no": "2",
+            "title": "Blockchain",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "video": "/",
+            "blog": "/",
+            "tag": "blockchain",
+            "blockchain-tag": "solana"
+        },
+        {
+            "level-no": "2",
+            "part-no": "1",
+            "title": "Smart contracts",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "video": "/",
+            "blog": "/",
+            "tag": "smart-contracts",
+            "blockchain-tag": "tag"
+        },
+        {
+            "level-no": "3",
+            "part-no": "1",
+            "title": "Crypto-currency",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "video": "/",
+            "blog": "/",
+            "tag": "btc",
+            "blockchain-tag": "btc"
+        }
+    ]
+}
