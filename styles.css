@@ -1,9 +1,16 @@
 body {
-    background-color: #F1FAEE;
+    background-color: #262626;
+    color: #fff;
+}
+
+h1 {
+    font-weight: 900;
+    margin-top: 18px;
 }
 
 p {
     margin-bottom: 0;
+    color: #9b9b9a;
 }
 
 .timeline {
@@ -30,23 +37,20 @@ p {
     position: relative;
     width: 80%;
     margin: 0 12px;
-    padding: 0 10px 10px 10px;
+    padding: 10px;
     text-align: right;
-    background-color: #DFF2EA;
-    border: 5px solid #E63946;
-    border-radius: 10px;
-    box-shadow: 0 0 0 5px #F1FAEE;
+    border-radius: 12px;
+    border: 2px solid #545454;
+    background-color: #404040;
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
 
-
 .timeline>li .timeline-panel:hover {
     visibility: visible;
     opacity: 1;
 }
-
 
 .timeline>li:nth-child(odd) .timeline-image {
     float: right;
@@ -66,10 +70,11 @@ p {
 
 .timeline>li .timeline-image {
     z-index: 1;
-    border: 7px solid #E63946;
+    border: 7px solid #404040;
     border-radius: 100%;
-    background-color: #3b5998;
-    box-shadow: 0 0 5px #E63946;
+    background: rgb(36, 0, 0);
+    background: radial-gradient(circle, rgba(236, 19, 49, 1) 0%, rgb(110, 3, 3) 100%);
+    box-shadow: 5px #545454;
     width: 100px;
     height: 100px;
 }
@@ -93,7 +98,7 @@ p {
     position: absolute;
     top: 38px;
     left: 100%;
-    border-left: 20px solid #E63946;
+    border-left: 15px solid #545454;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 }
@@ -102,34 +107,31 @@ p {
     position: absolute;
     top: 38px;
     right: 100%;
-    border-right: 20px solid #E63946;
+    border-right: 15px solid #545454;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 }
 
 /*Style for even div.line*/
-.timeline>li:nth-child(odd) .line {
+.timeline>li .line {
     position: absolute;
     top: 50px;
     bottom: 0;
-    left: 100%;
-    width: 4px;
+    width: 8px;
     height: 240px;
-    background-color: #E63946;
+    background-color: #404040;
+    border: 1px solid #545454;
+    box-shadow: 0 0 2px #404040;
+}
+
+.timeline>li:nth-child(odd) .line {
     transform: rotate(-22deg);
-    box-shadow: 0 0 5px #E63946;
+    left: 100%;
 }
 
 .timeline>li:nth-child(even) .line {
-    position: absolute;
-    top: 50px;
-    bottom: 0;
-    width: 4px;
     right: 100%;
-    height: 240px;
-    background-color: #E63946;
     transform: rotate(23deg);
-    box-shadow: 0 0 5px #E63946;
 }
 
 .timeline>li .timeline-image {
@@ -140,19 +142,14 @@ p {
 .timeline>li .timeline-image .num {
     color: white;
     position: absolute;
-    top: 20px;
-    left: 32px;
+    font-weight: 600;
+    top: 18px;
+    left: 34px;
     font-size: 2rem;
 }
 
-
-
-.btn-primary {
+.btn-secondary {
     margin: 2% 2% 2% 0%;
-}
-
-.btn-default {
-    margin: 2% 0% 2% 2%;
 }
 
 .badge {
@@ -178,15 +175,15 @@ p {
 
     .timeline>li .timeline-image {
         margin-left: 3px;
-        width: 32px;
+        width: 36px;
         height: 32px;
-        border: 2px solid #E63946;
+        border: 2px solid #545454;
     }
 
     .timeline>li .timeline-panel {
         height: auto;
         width: 100%;
-        border: 4px solid #E63946;
+        border: 2px solid #545454;
         margin: 0 12px 2rem 12px;
         text-align: left;
         visibility: visible;
@@ -195,36 +192,37 @@ p {
 
     .timeline>li:nth-child(odd) .line,
     .timeline>li:nth-child(even) .line {
+        width: 4px;
         transform: rotate(0deg);
         top: 10px;
         height: 100%;
         left: auto;
         right: auto;
-        margin-left: 14px;
+        margin-left: 17px;
     }
 
     .timeline>li .triangle {
-        top: 0px;
+        top: 5px;
         z-index: 1;
         left: auto;
         right: 100%;
         border-left: none;
-        border-right: 15px solid #E63946;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
+        border-right: 15px solid #545454;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
     }
 
     .timeline>li .triangle-inverted {
-        top: 0px;
+        top: 5px;
         z-index: 1;
-        border-right: 15px solid #E63946;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
+        border-right: 15px solid #545454;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
     }
 
     .timeline>li .timeline-image .num {
         top: 2px;
-        left: 8px;
+        left: 10px;
         font-size: 1rem;
     }
 }
