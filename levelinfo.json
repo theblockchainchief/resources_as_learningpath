@@ -4,17 +4,18 @@
             "part-no": "1",
             "title": "Blockchain",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "/",
+            "video": "https://www.youtube.com/",
             "blog": "/",
             "tag": "blockchain",
-            "blockchain-tag": "ethereum"
+            "blockchain-tag": "ethereum",
+            "isCompleted": false
         },
         {
             "level-no": "1",
             "part-no": "2",
             "title": "Blockchain",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "/",
+            "video": "https://www.google.com",
             "blog": "/",
             "tag": "blockchain",
             "blockchain-tag": "solana"

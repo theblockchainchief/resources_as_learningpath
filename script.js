@@ -19,7 +19,7 @@ function showLevels(obj) {
         }
 
         let imgContainer = document.createElement('div');
-        imgContainer.className = "timeline-image";
+        imgContainer.classList = "timeline-image timeline-image-red";
         let level = document.createElement('div');
         level.className = "num";
         level.textContent = resources[i]["level-no"];
@@ -39,19 +39,38 @@ function showLevels(obj) {
         let timelinePanelMainHeading = document.createElement('h4');
         let timelinePanelSubHeading = document.createElement('h4');
         timelinePanelSubHeading.className = "subheading";
-        timelinePanelMainHeading.textContent = "Part-" + resources[i]["part-no"];
+
         timelinePanelSubHeading.textContent = resources[i]["title"];
+        let isCompleted = document.createElement('input');
+        isCompleted.className = "form-check-input";
+        isCompleted.id = "flexCheckDefault";
+        isCompleted.type = "checkbox";
+
+        isCompleted.onclick = function () {
+            if (isCompleted.checked) {
+                imgContainer.classList = "timeline-image timeline-image-green";
+            } else {
+                imgContainer.classList = "timeline-image timeline-image-red";
+            }
+            progressHandler(isCompleted);
+        }
+
+        timelinePanelMainHeading.appendChild(isCompleted);
+        timelinePanelMainHeading.append("Part-" + resources[i]["part-no"]);
+
+        let tagContainer = document.createElement('div');
         let tag = document.createElement('span');
         let blockchainTag = document.createElement('span');
         tag.className = "badge bg-dark";
         tag.textContent = resources[i]["tag"];
         blockchainTag.className = "badge bg-light text-dark";
         blockchainTag.textContent = resources[i]["blockchain-tag"];
+        tagContainer.appendChild(tag);
+        tagContainer.appendChild(blockchainTag);
 
         timelinePanelHeading.appendChild(timelinePanelMainHeading);
         timelinePanelHeading.appendChild(timelinePanelSubHeading);
-        timelinePanelHeading.appendChild(tag);
-        timelinePanelHeading.appendChild(blockchainTag);
+        timelinePanelHeading.appendChild(tagContainer);
         timelinePanel.appendChild(timelinePanelHeading);
 
         let timelinePanelBody = document.createElement('div');
