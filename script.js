@@ -8,6 +8,19 @@ request.onload = function () {
     showLevels(levels);
 }
 
+function progressHandler(resources) {
+
+    let tot = 0;
+    for (let i = 0; i < resources.length; i++) {
+        tot += resources[i]["isCompleted"] ? 1 : 0;
+    }
+    console.log("Called" + tot);
+    let completed = tot * 100 / resources.length + "%";
+    let progress = document.getElementsByClassName("progress-bar")[0];
+    progress.innerHTML = completed;
+    progress.style.width = completed;
+}
+
 function showLevels(obj) {
     const resources = obj['resources'];
     let list = document.querySelector('ul');
@@ -49,10 +62,12 @@ function showLevels(obj) {
         isCompleted.onclick = function () {
             if (isCompleted.checked) {
                 imgContainer.classList = "timeline-image timeline-image-green";
+                resources[i]["isCompleted"] = true;
             } else {
                 imgContainer.classList = "timeline-image timeline-image-red";
+                resources[i]["isCompleted"] = false;
             }
-            progressHandler(isCompleted);
+            progressHandler(resources);
         }
 
         timelinePanelMainHeading.appendChild(isCompleted);
