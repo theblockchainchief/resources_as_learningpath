@@ -176,7 +176,7 @@ p {
     position: absolute;
     font-weight: 600;
     top: 18px;
-    left: 34px;
+    left: 25px;
     font-size: 2rem;
 }
 
@@ -254,7 +254,7 @@ p {
 
     .timeline>li .timeline-image .num {
         top: 2px;
-        left: 10px;
+        left: 6px;
         font-size: 1rem;
     }
 }
