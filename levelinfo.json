@@ -42,8 +42,7 @@
             "tag": "btc",
             "blockchain-tag": "btc",
             "isCompleted": false
-        }
-        ,
+        },
         {
             "level-no": "04",
             "part-no": "1",
@@ -54,7 +53,7 @@
             "tag": "tag",
             "blockchain-tag": "blockchain-tag",
             "isCompleted": false
-        },{
+        }, {
             "level-no": "05",
             "part-no": "1",
             "title": "Blockchain",
@@ -97,8 +96,7 @@
             "tag": "btc",
             "blockchain-tag": "btc",
             "isCompleted": false
-        }
-        ,
+        },
         {
             "level-no": "08",
             "part-no": "1",
@@ -109,7 +107,7 @@
             "tag": "tag",
             "blockchain-tag": "blockchain-tag",
             "isCompleted": false
-        },{
+        }, {
             "level-no": "09",
             "part-no": "1",
             "title": "Blockchain",
@@ -152,8 +150,7 @@
             "tag": "btc",
             "blockchain-tag": "btc",
             "isCompleted": false
-        }
-        ,
+        },
         {
             "level-no": "12",
             "part-no": "1",
@@ -164,7 +161,7 @@
             "tag": "tag",
             "blockchain-tag": "blockchain-tag",
             "isCompleted": false
-        },{
+        }, {
             "level-no": "13",
             "part-no": "1",
             "title": "Blockchain",
@@ -207,8 +204,7 @@
             "tag": "btc",
             "blockchain-tag": "btc",
             "isCompleted": false
-        }
-        ,
+        },
         {
             "level-no": "16",
             "part-no": "1",

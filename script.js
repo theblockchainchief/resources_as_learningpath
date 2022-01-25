@@ -1,8 +1,8 @@
-let count=0;
+let count = 0;
 let levels;
 let isInverted = false;
 
-async function populate(){
+async function populate() {
     let requestURL = "levelinfo.json";
     const request = new Request(requestURL);
     const response = await fetch(request);
@@ -12,12 +12,20 @@ async function populate(){
 
 populate();
 
-document.addEventListener("scroll",function(){
-    const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
-    console.log({scrollTop,scrollHeight,clientHeight});
-    if(scrollTop+clientHeight>=scrollHeight-15){
+document.addEventListener("scroll", function () {
+    const {
+        scrollTop,
+        scrollHeight,
+        clientHeight
+    } = document.documentElement;
+    console.log({
+        scrollTop,
+        scrollHeight,
+        clientHeight
+    });
+    if (scrollTop + clientHeight >= scrollHeight - 15) {
         console.log("called");
-        count+=5;
+        count += 5;
         showLevels(levels);
     }
 })
@@ -38,10 +46,17 @@ function progressHandler(resources) {
 function showLevels(obj) {
     const resources = obj['resources'];
     let list = document.querySelector('ul');
-    for (let i = count; i < count+5 && i<resources.length; i++) {
+    for (let i = count; i < count + 5 && i < resources.length; i++) {
         let listItem = document.createElement('li');
+        let title = document.createElement('h4');
+        title.textContent = resources[i]['title'];
+        title.classList.add('topic');
+        title.classList.add('topic-right')
+        listItem.appendChild(title);
+
         if (isInverted) {
             listItem.className = 'timeline-inverted';
+            title.classList.replace('topic-right', 'topic-left');
         }
 
         let imgContainer = document.createElement('div');
@@ -138,7 +153,7 @@ function showLevels(obj) {
         listItem.appendChild(timelinePanel);
 
         let line = document.createElement('div');
-        if (i != resources.length - 1 )
+        if (i != resources.length - 1)
             line.className = "line";
 
         listItem.appendChild(line);
