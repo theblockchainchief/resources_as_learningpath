@@ -1,7 +1,8 @@
-let count = 0;
-let levels;
-let isInverted = false;
+let count = 0; // Number of levels to display
+let levels; // Array to store the level details from the data
+let isInverted = false; // Boolean to check if the content is to be displayed on the right side
 
+// Function to get the data from the levelinfo.json file
 async function populate() {
     let requestURL = "levelinfo.json";
     const request = new Request(requestURL);
@@ -12,6 +13,7 @@ async function populate() {
 
 populate();
 
+// Method to check if the user has reached the end of the page
 document.addEventListener("scroll", function () {
     const {
         scrollTop,
@@ -30,6 +32,8 @@ document.addEventListener("scroll", function () {
     }
 })
 
+
+// Function to update the progress bar
 function progressHandler(resources) {
 
     let tot = 0;
@@ -37,18 +41,23 @@ function progressHandler(resources) {
         tot += resources[i]["isCompleted"] ? 1 : 0;
     }
     console.log("Called" + tot);
-    let completed = tot * 100 / resources.length + "%";
+    let completed = Math.floor(tot * 100 / resources.length) + "%";
     let progress = document.getElementsByClassName("progress-bar")[0];
     progress.innerHTML = completed;
     progress.style.width = completed;
 }
 
+// Function to add elements to the page
 function showLevels(obj) {
     const resources = obj['resources'];
     let list = document.querySelector('ul');
     for (let i = count; i < count + 5 && i < resources.length; i++) {
+
         let listItem = document.createElement('li');
+        
         let title = document.createElement('h4');
+        
+        // title-label
         title.textContent = resources[i]['title'];
         title.classList.add('topic');
         title.classList.add('topic-right')
@@ -58,7 +67,9 @@ function showLevels(obj) {
             listItem.className = 'timeline-inverted';
             title.classList.replace('topic-right', 'topic-left');
         }
-
+        
+        
+        // To display level number
         let imgContainer = document.createElement('div');
         imgContainer.classList = "timeline-image timeline-image-red";
         let level = document.createElement('div');
@@ -72,6 +83,8 @@ function showLevels(obj) {
 
         listItem.appendChild(imgContainer);
 
+
+        // Panel that displays the resources
         let timelinePanel = document.createElement('div');
         timelinePanel.classList = "timeline-panel";
 
@@ -87,6 +100,7 @@ function showLevels(obj) {
         isCompleted.id = "flexCheckDefault";
         isCompleted.type = "checkbox";
 
+        // To change the colour of the level to green if its completed
         isCompleted.onclick = function () {
             if (isCompleted.checked) {
                 imgContainer.classList = "timeline-image timeline-image-green";
@@ -152,6 +166,7 @@ function showLevels(obj) {
 
         listItem.appendChild(timelinePanel);
 
+        // Line that connects 2 levels
         let line = document.createElement('div');
         if (i != resources.length - 1)
             line.className = "line";

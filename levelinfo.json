@@ -119,7 +119,7 @@
             "isCompleted": false
         },
         {
-            "level-no": "9",
+            "level-no": "09",
             "part-no": "2",
             "title": "Blockchain",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -170,50 +170,6 @@
             "blog": "/",
             "tag": "blockchain",
             "blockchain-tag": "ethereum",
-            "isCompleted": false
-        },
-        {
-            "level-no": "13",
-            "part-no": "2",
-            "title": "Blockchain",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "https://www.google.com",
-            "blog": "/",
-            "tag": "blockchain",
-            "blockchain-tag": "solana",
-            "isCompleted": false
-        },
-        {
-            "level-no": "14",
-            "part-no": "1",
-            "title": "Smart contracts",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "/",
-            "blog": "/",
-            "tag": "smart-contracts",
-            "blockchain-tag": "tag",
-            "isCompleted": false
-        },
-        {
-            "level-no": "15",
-            "part-no": "1",
-            "title": "Crypto-currency",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "/",
-            "blog": "/",
-            "tag": "btc",
-            "blockchain-tag": "btc",
-            "isCompleted": false
-        },
-        {
-            "level-no": "16",
-            "part-no": "1",
-            "title": "Final",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "video": "/",
-            "blog": "/",
-            "tag": "tag",
-            "blockchain-tag": "blockchain-tag",
             "isCompleted": false
         }
     ]
