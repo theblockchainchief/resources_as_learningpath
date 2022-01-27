@@ -32,7 +32,7 @@ function showLevels(obj) {
         listItem.appendChild(imgContainer);
 
         let timelinePanel = document.createElement('div');
-        timelinePanel.className = "timeline-panel";
+        timelinePanel.classList = "timeline-panel";
 
         let timelinePanelHeading = document.createElement('div');
         timelinePanelHeading.className = "timeline-heading";
@@ -43,9 +43,9 @@ function showLevels(obj) {
         timelinePanelSubHeading.textContent = resources[i]["title"];
         let tag = document.createElement('span');
         let blockchainTag = document.createElement('span');
-        tag.className = "label label-primary";
+        tag.className = "badge bg-dark";
         tag.textContent = resources[i]["tag"];
-        blockchainTag.className = "label label-default";
+        blockchainTag.className = "badge bg-light text-dark";
         blockchainTag.textContent = resources[i]["blockchain-tag"];
 
         timelinePanelHeading.appendChild(timelinePanelMainHeading);
@@ -58,9 +58,10 @@ function showLevels(obj) {
         timelinePanelBody.classList = "timeline-body";
 
         let timelinePanelBodyContents = document.createElement('p');
-        timelinePanelBodyContents.className = "txt-muted";
+        timelinePanelBodyContents.className = "text-muted";
         timelinePanelBodyContents.textContent = resources[i]["description"];
 
+        let timelinePanelBodyBtns = document.createElement('div');
         let videoButton = document.createElement('button');
         videoButton.className = "btn btn-primary";
         videoButton.textContent = "Watch Video";
@@ -68,16 +69,16 @@ function showLevels(obj) {
             window.open(resources[i]["video"]);
         }
         let blogButton = document.createElement('button');
-        blogButton.className = "btn btn-default";
+        blogButton.className = "btn btn-secondary";
         blogButton.textContent = "Read Blog";
         blogButton.onclick = function () {
             window.open(resources[i]["blog"]);
         }
-
+        timelinePanelBodyBtns.appendChild(videoButton);
+        timelinePanelBodyBtns.appendChild(blogButton);
 
         timelinePanelBody.appendChild(timelinePanelBodyContents);
-        timelinePanelBody.appendChild(videoButton);
-        timelinePanelBody.appendChild(blogButton);
+        timelinePanelBody.appendChild(timelinePanelBodyBtns);
         timelinePanel.appendChild(timelinePanelBody);
 
         let timelinePanelTriangle = document.createElement('div');
@@ -86,7 +87,7 @@ function showLevels(obj) {
         } else
             timelinePanelTriangle.className = "triangle";
 
-        timelinePanelBody.appendChild(timelinePanelTriangle);
+        timelinePanel.appendChild(timelinePanelTriangle);
 
         listItem.appendChild(timelinePanel);
 
