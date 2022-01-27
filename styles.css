@@ -72,11 +72,17 @@ p {
     z-index: 1;
     border: 7px solid #404040;
     border-radius: 100%;
-    background: rgb(36, 0, 0);
-    background: radial-gradient(circle, rgba(236, 19, 49, 1) 0%, rgb(110, 3, 3) 100%);
     box-shadow: 5px #545454;
     width: 100px;
     height: 100px;
+}
+
+.timeline>li .timeline-image-red {
+    background: radial-gradient(circle, rgba(236, 19, 49, 1) 0%, rgb(110, 3, 3) 100%);
+}
+
+.timeline>li .timeline-image-green {
+    background: radial-gradient(circle, rgba(81, 157, 28, 1) 0%, rgba(0, 74, 8, 1) 100%);
 }
 
 .timeline>li .timeline-image:hover {
@@ -137,6 +143,22 @@ p {
 .timeline>li .timeline-image {
     position: relative;
 
+}
+
+#flexCheckDefault {
+    cursor: pointer;
+    margin: 3px 5px;
+    border: none
+}
+
+#flexCheckDefault:checked {
+    background-color: rgba(81, 157, 28, 1);
+    border: none;
+    box-shadow: none;
+}
+
+#flexCheckDefault:focus {
+    box-shadow: none;
 }
 
 .timeline>li .timeline-image .num {
