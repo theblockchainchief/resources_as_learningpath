@@ -58,18 +58,17 @@ function showLevels(obj) {
         timelinePanelBody.classList = "timeline-body";
 
         let timelinePanelBodyContents = document.createElement('p');
-        timelinePanelBodyContents.className = "text-muted";
         timelinePanelBodyContents.textContent = resources[i]["description"];
 
         let timelinePanelBodyBtns = document.createElement('div');
         let videoButton = document.createElement('button');
-        videoButton.className = "btn btn-primary";
+        videoButton.className = "btn btn-secondary";
         videoButton.textContent = "Watch Video";
         videoButton.onclick = function () {
             window.open(resources[i]["video"]);
         }
         let blogButton = document.createElement('button');
-        blogButton.className = "btn btn-secondary";
+        blogButton.className = "btn btn-outline-light";
         blogButton.textContent = "Read Blog";
         blogButton.onclick = function () {
             window.open(resources[i]["blog"]);
