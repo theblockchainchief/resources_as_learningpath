@@ -32,7 +32,6 @@ document.addEventListener("scroll", function () {
     }
 })
 
-
 // Function to update the progress bar
 function progressHandler(resources) {
 
@@ -52,7 +51,6 @@ function showLevels(obj) {
     const resources = obj['resources'];
     let list = document.querySelector('ul');
     for (let i = count; i < count + 5 && i < resources.length; i++) {
-
         let listItem = document.createElement('li');
         
         let title = document.createElement('h4');
@@ -168,7 +166,7 @@ function showLevels(obj) {
 
         // Line that connects 2 levels
         let line = document.createElement('div');
-        if (i != resources.length - 1)
+        if (i != resources.length - 1 )
             line.className = "line";
 
         listItem.appendChild(line);
