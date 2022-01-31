@@ -1,12 +1,26 @@
-let requestURL = "levelinfo.json";
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function () {
-    const levels = request.response;
+let count=0;
+let levels;
+let isInverted = false;
+
+async function populate(){
+    let requestURL = "levelinfo.json";
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    levels = await response.json();
     showLevels(levels);
 }
+
+populate();
+
+document.addEventListener("scroll",function(){
+    const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
+    console.log({scrollTop,scrollHeight,clientHeight});
+    if(scrollTop+clientHeight>=scrollHeight-15){
+        console.log("called");
+        count+=5;
+        showLevels(levels);
+    }
+})
 
 function progressHandler(resources) {
 
@@ -24,8 +38,7 @@ function progressHandler(resources) {
 function showLevels(obj) {
     const resources = obj['resources'];
     let list = document.querySelector('ul');
-    let isInverted = false;
-    for (let i = 0; i < resources.length; i++) {
+    for (let i = count; i < count+5 && i<resources.length; i++) {
         let listItem = document.createElement('li');
         if (isInverted) {
             listItem.className = 'timeline-inverted';
@@ -125,7 +138,7 @@ function showLevels(obj) {
         listItem.appendChild(timelinePanel);
 
         let line = document.createElement('div');
-        if (i != resources.length - 1)
+        if (i != resources.length - 1 )
             line.className = "line";
 
         listItem.appendChild(line);
